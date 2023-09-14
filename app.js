@@ -10,6 +10,10 @@ app.get("/",(req,res)=>{
 ///routes management using middlewares
 const dustbinRoute=require("./routes/dustbin")
 const complaintRoute=require("./routes/raisecomplaint")
+const TruckRoute=require("./routes/truckconnection")
+const WorkerAppointment=require("./routes/Workerappoint")
+app.use("/workers",WorkerAppointment)
+app.use("/trucks",TruckRoute)
 app.use("/dustbin",dustbinRoute)
 app.use("/complaints",complaintRoute)
 app.listen(port,()=>console.log(`sever is running on http://localhost:${port}`))
