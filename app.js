@@ -9,7 +9,7 @@ app.get("/",(req,res)=>{
 
 ///routes management using middlewares
 const dustbinRoute=require("./routes/dustbin")
-
+const complaintRoute=require("./routes/raisecomplaint")
 app.use("/dustbin",dustbinRoute)
-
+app.use("/complaints",complaintRoute)
 app.listen(port,()=>console.log(`sever is running on http://localhost:${port}`))
